@@ -1,4 +1,4 @@
-import { Form, FormContainer, Input, SendButton, StyledLabel, RegisterButton } from "./styled";
+import { Form, FormContainer, Input, SendButton, StyledLabel, StyledLabelo, RegisterButton, InputRel, InputRelative } from "./styled";
 
 function TelaLogin(props) {
 
@@ -10,12 +10,15 @@ function TelaLogin(props) {
     <FormContainer >
       <h1>LOGIN</h1>
       <Form>
-        <StyledLabel>E-mail:
-          <Input />
-        </StyledLabel>
-        <StyledLabel>Senha:
+        <InputRel>
+          <Input required type={"login"}/>
+          <StyledLabelo>E-mail:</StyledLabelo>
+          </InputRel>
+          <InputRelative>
           <Input type={"password"}/>
-        </StyledLabel>
+          <StyledLabel onFocus="password">Senha:</StyledLabel>
+          </InputRelative>
+          
         <SendButton onClick={enviarLogin}>Entrar</SendButton>
         <RegisterButton onClick={() => props.mudarTela(2)}>Cadastre-se</RegisterButton>
       </Form>

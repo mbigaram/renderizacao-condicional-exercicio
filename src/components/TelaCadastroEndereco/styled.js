@@ -44,7 +44,7 @@ export const BackToLoginButton = styled.button`
         background-color: black;
         color: white;
     }
-`
+`;
 
 export const StyledLabel = styled.label`
   width: 300px;
