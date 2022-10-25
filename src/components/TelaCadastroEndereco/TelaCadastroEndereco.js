@@ -1,31 +1,31 @@
 import { Form, FormContainer, Input, StyledLabel, SendButton, BackToLoginButton } from "./styled";
 
-function TelaCadastro(props) {
+function TelaCadastroEndereco(props) {
   return (
     <FormContainer>
-      <h1>CADASTRO </h1>
+      <h1>ENDEREÇO </h1>
       <Form>
         <StyledLabel htmlFor="titulo">
-          Nome:
+          Rua:
           <Input id="titulo" />
         </StyledLabel>
         <StyledLabel htmlFor="foto">
-          E-mail:
+          Número:
           <Input id="foto" />
         </StyledLabel>
         <StyledLabel htmlFor="descricao">
-          Senha:
+          Telefone:
           <Input id="descricao" />
         </StyledLabel>
         <StyledLabel htmlFor="descricao">
-          Confirmação da senha:
+          Complemento:
           <Input id="descricao" />
         </StyledLabel>
-        <SendButton onClick={() => props.mudarTela(3)}>Cadastrar Endereço</SendButton>
+        <SendButton onClick={() => props.mudarTela(4)}>Cadastrar</SendButton>
         <BackToLoginButton onClick={() => props.mudarTela(1)}>Já possuo um cadastro</BackToLoginButton>
       </Form>
     </FormContainer>
   );
 }
 
-export default TelaCadastro;
+export default TelaCadastroEndereco;
